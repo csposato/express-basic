@@ -8,7 +8,6 @@ const URL_TOKEN = process.env.URI + process.env.TOKEN_PATH;
 
 let urlUserProfile = process.env.URI + process.env.USER_PROFILE_PATH;
 
-// let token = 'Bearer AAIkZTA5ZDZkYzAtMDk1Mi00M2I5LWI5Y2EtMGI0NzBlN2ZkMDU48HlI6kogSkvNPwjF_MSXsgn_6NIzUORE4gM79kf8xtVBHL-voUoSa2rsF6xHqWWPMjd6dsi9oNFZER_k5Vc1p1MjAi7GnTCPOpRcwL73qCOP_OEGVXJVUhqDNhzSbyDY';
 let token = 'Bearer ';
 
 /* const body = {
