@@ -7,16 +7,8 @@ const CLIENT_SECRET = process.env.CLIENT_SECRET || '';
 const URL_TOKEN = process.env.URI + process.env.TOKEN_PATH;
 
 let urlUserProfile = process.env.URI + process.env.USER_PROFILE_PATH;
-
-// let token = 'Bearer AAIkZTA5ZDZkYzAtMDk1Mi00M2I5LWI5Y2EtMGI0NzBlN2ZkMDU48HlI6kogSkvNPwjF_MSXsgn_6NIzUORE4gM79kf8xtVBHL-voUoSa2rsF6xHqWWPMjd6dsi9oNFZER_k5Vc1p1MjAi7GnTCPOpRcwL73qCOP_OEGVXJVUhqDNhzSbyDY';
 let token = 'Bearer ';
 
-/* const body = {
-    grant_type: 'client_credentials',
-    scope: 'scope1',
-    client_id: CLIENT_ID,
-    client_secret: CLIENT_SECRET
-} */
 const body = new URLSearchParams();
 body.append('grant_type', 'client_credentials');
 body.append('scope', 'scope1');
@@ -36,7 +28,6 @@ let callOptionsT = {
 
 const getToken = async (req, res) => {
     try {
-        //console.log(req);
         fetch(URL_TOKEN, callOptionsT)
                 .then((res) => {
                     console.log('urlToken: ' + URL_TOKEN);
@@ -68,8 +59,6 @@ const getUserProfile = async (req, res) => {
             return res.json();
         })
         .then((data) => {
-            //token += data.access_token;
-            //res.send(data);
             console.log('token: ' + data.access_token);
             let callOptionsUP = {
                 method: 'GET',
@@ -82,13 +71,11 @@ const getUserProfile = async (req, res) => {
                 mode: 'cors',
                 cache: 'default'
             };
-            //urlUserProfile = urlUserProfile + req.params.userId;
             fetch(urlUserProfile + req.params.userId, callOptionsUP)
                 .then((res) => {
                     console.log('urlUP: ' + urlUserProfile);
                     console.log('callOptions: ' + callOptionsUP);
                     console.log('params: ' + req.params.userId);
-                    //console.log(res);
                     return res.json();
                 })
                 .then((data) => {
