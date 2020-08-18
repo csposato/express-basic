@@ -7,6 +7,7 @@ const CLIENT_SECRET = process.env.CLIENT_SECRET || '';
 const URL_TOKEN = process.env.URI + process.env.TOKEN_PATH;
 
 let urlUserProfile = process.env.URI + process.env.USER_PROFILE_PATH;
+
 let token = 'Bearer ';
 
 const body = new URLSearchParams();
