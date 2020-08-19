@@ -1,0 +1,16 @@
+[ignore]
+.*/__tests__/.*
+
+[untyped]
+.*/node_modules/*
+.*/packages/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]

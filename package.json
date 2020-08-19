@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "start": "node app.js"
+    "start": "node app.js",
+    "flow": "flow"
   },
   "author": "",
   "license": "ISC",
@@ -15,8 +16,12 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-flow": "^7.10.4",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "flow-bin": "^0.131.0",
     "jest": "^26.4.0",
     "superagent": "^6.0.0",
     "supertest": "^4.0.2"
