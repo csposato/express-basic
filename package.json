@@ -23,6 +23,7 @@
         "@babel/preset-flow": "^7.10.4",
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^1.7.0",
+        "flow-bin": "^0.131.0",
         "jest": "^26.4.0",
         "prettier": "2.0.5",
         "superagent": "^6.0.0",
