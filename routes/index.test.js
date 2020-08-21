@@ -7,7 +7,7 @@ describe('Test get token path', () => {
         const res = await request(app).post('/token');
         expect(res.statusCode).toEqual(200);
         expect(res.body).toHaveProperty('access_token');
-    })
+    });
 });
 
 /*
